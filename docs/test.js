@@ -13,9 +13,13 @@ test.addEventListener('touchend', function() {
   count++;
 })
 
-li = document.createElement('li')
-li.textContent = 'screen.innerWidth ' + screen.innerWidth;
-log3.appendChild(li);
-li = document.createElement('li')
-li.textContent = 'screen.innerHeight ' + screen.innerHeight;
-log3.appendChild(li);
+function addInfo(info) {
+  li = document.createElement('li')
+  li.textContent = info;
+  log3.appendChild(li);
+
+}
+addInfo('window.innerWidth ' + window.innerWidth);
+addInfo('window.innerHeight ' + window.innerHeight);
+addInfo('screen.width ' + screen.width);
+addInfo('screen.height ' + screen.height);
