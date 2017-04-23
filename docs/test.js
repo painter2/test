@@ -3,14 +3,19 @@ var test = document.getElementById('test');
 var log = document.getElementById('log')
 var log2 = document.getElementById('log2')
 var count = 0;
+var touchCount = 0;
 test.addEventListener('click', function() {
-  log.textContent = 'clicked' + count
   count++;
+  log.textContent = 'clicked' + count;
 })
 
 document.addEventListener('touchend', function() {
-  log2.textContent = 'touchend' + count
-  count++;
+  touchCount++;
+  log2.textContent = 'touchend' + touchCount;
+})
+
+window.addEventListener('resize', function() {
+  log2.textContent = 'resize ' + window.innerWidth + ' x ' + window.innerHeight;
 })
 
 function addInfo(info) {
