@@ -8,7 +8,7 @@ test.addEventListener('click', function() {
   count++;
 })
 
-test.addEventListener('touchend', function() {
+document.addEventListener('touchend', function() {
   log2.textContent = 'touchend' + count
   count++;
 })
